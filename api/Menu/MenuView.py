@@ -14,9 +14,9 @@ class MenuList(generics.ListCreateAPIView):
         serializer = MenuSerializer(data=request.data)
         if serializer.is_valid():
             date = serializer.validated_data.get('date')
-            tipo = serializer.validated_data.get('tipo')
+            period_of_day = serializer.validated_data.get('period_of_day')
             
-            queryset = Menu.objects.filter(date=date, tipo=tipo)
+            queryset = Menu.objects.filter(date=date, period_of_day=period_of_day)
             if queryset.exists():
                 return Response({'message':'Já existe um cardápio para este dia/horario'}, status=status.HTTP_409_CONFLICT)
             serializer.save()

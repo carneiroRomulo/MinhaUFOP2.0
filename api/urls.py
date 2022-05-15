@@ -1,10 +1,12 @@
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
+
 from .Auth import AuthView
 from .Menu import MenuView
 from .Building import BuildingView
 from .Department import DepartmentView
 from .Subject import SubjectView
+from .Teacher import TeacherView
 
 urlpatterns = [    
     path('auth/register', AuthView.RegisterView.as_view(), name='Register'),
@@ -24,5 +26,8 @@ urlpatterns = [
     
     path('subject/', SubjectView.SubjectList.as_view(), name='Subject List'),
     path('subject/<int:pk>/', SubjectView.SubjectDetail.as_view(), name='Subject Detail'),
+    
+    path('teacher/', TeacherView.TeacherList.as_view(), name='Teacher List'),
+    path('teacher/<int:pk>/', TeacherView.TeacherDetail.as_view(), name='Teacher Detail'),
 ]
 
