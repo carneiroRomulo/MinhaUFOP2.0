@@ -1,6 +1,6 @@
 from django.db import models
 
-TIPO = (
+PERIOD_OF_DAY = (
     ('---', '---'),
     ('Almoço', 'Almoço'),
     ('Janta', 'Janta'),
@@ -39,7 +39,7 @@ class Menu(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     date = models.DateField()
     
-    tipo = models.CharField(choices=TIPO, max_length=100, default=TIPO[0])
+    period_of_day = models.CharField(choices=PERIOD_OF_DAY, max_length=100, default=PERIOD_OF_DAY[0])
     
     salad = models.CharField(choices=SALAD, max_length=100, default=SALAD[0])
     protein_main = models.CharField(choices=PROTEIN_MAIN, max_length=100, default=PROTEIN_MAIN[0])

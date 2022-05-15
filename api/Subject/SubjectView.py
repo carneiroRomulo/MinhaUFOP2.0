@@ -2,21 +2,21 @@ from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser
 
-from .MenuModel import Menu
-from .MenuSerializer import  MenuSerializer
+from .SubjectModel import Subject
+from .SubjectSerializer import  SubjectSerializer
 
-class MenuList(generics.ListCreateAPIView):
+class SubjectList(generics.ListCreateAPIView):
     #permission_classes = [IsAdminUser]
-    serializer_class = MenuSerializer
-    queryset = Menu.objects.all()
+    serializer_class = SubjectSerializer
+    queryset = Subject.objects.all()
     
     def create(self, request, format=None):
-        serializer = MenuSerializer(data=request.data)
+        serializer = SubjectSerializer(data=request.data)
         if serializer.is_valid():
             date = serializer.validated_data.get('date')
             tipo = serializer.validated_data.get('tipo')
             
-            queryset = Menu.objects.filter(date=date, tipo=tipo)
+            queryset = Subject.objects.filter(date=date, tipo=tipo)
             if queryset.exists():
                 return Response({'message':'Já existe um cardápio para este dia/horario'}, status=status.HTTP_409_CONFLICT)
             serializer.save()
@@ -25,7 +25,7 @@ class MenuList(generics.ListCreateAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class MenuDetail(generics.RetrieveUpdateDestroyAPIView):
+class SubjectDetail(generics.RetrieveUpdateDestroyAPIView):
     #permission_classes = [IsAdminUser]
-    serializer_class =  MenuSerializer
-    queryset = Menu.objects.all()
+    serializer_class =  SubjectSerializer
+    queryset = Subject.objects.all()
