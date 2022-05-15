@@ -7,6 +7,7 @@ from .Building import BuildingView
 from .Department import DepartmentView
 from .Subject import SubjectView
 from .Teacher import TeacherView
+from .Classroom import ClassroomView
 
 urlpatterns = [    
     path('auth/register', AuthView.RegisterView.as_view(), name='Register'),
@@ -29,5 +30,8 @@ urlpatterns = [
     
     path('teacher/', TeacherView.TeacherList.as_view(), name='Teacher List'),
     path('teacher/<int:pk>/', TeacherView.TeacherDetail.as_view(), name='Teacher Detail'),
+    
+    path('classroom/', ClassroomView.ClassroomList.as_view(), name='Classroom List'),
+    path('classroom/<int:pk>/', ClassroomView.ClassroomDetail.as_view(), name='Classroom Detail'),
 ]
 
