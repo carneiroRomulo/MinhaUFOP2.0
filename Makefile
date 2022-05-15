@@ -1,4 +1,4 @@
-backend-run:
+run:
 	python3 manage.py runserver
 
 backend-migrate:
