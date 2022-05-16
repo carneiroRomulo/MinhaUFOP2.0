@@ -8,6 +8,7 @@ from .Department import DepartmentView
 from .Subject import SubjectView
 from .Teacher import TeacherView
 from .Classroom import ClassroomView
+from .Period import PeriodView
 
 urlpatterns = [    
     path('auth/register', AuthView.RegisterView.as_view(), name='Register'),
@@ -33,5 +34,11 @@ urlpatterns = [
     
     path('classroom/', ClassroomView.ClassroomList.as_view(), name='Classroom List'),
     path('classroom/<int:pk>/', ClassroomView.ClassroomDetail.as_view(), name='Classroom Detail'),
+    
+    path('teacher/', TeacherView.TeacherList.as_view(), name='Teacher List'),
+    path('teacher/<int:pk>/', TeacherView.TeacherDetail.as_view(), name='Teacher Detail'),
+    
+    path('period/', PeriodView.PeriodList.as_view(), name='Period List'),
+    path('period/<int:pk>/', PeriodView.PeriodDetail.as_view(), name='Period Detail'),
 ]
 
