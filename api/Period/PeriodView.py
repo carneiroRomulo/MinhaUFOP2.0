@@ -13,11 +13,8 @@ class PeriodList(generics.ListCreateAPIView):
     def create(self, request, format=None):
         serializer = PeriodSerializer(data=request.data)
         if serializer.is_valid():
-            name = Period.objects.filter(name = serializer.validated_data.get('name'))
             code = Period.objects.filter(code = serializer.validated_data.get('code'))
-            if name.exists():
-                return Response({'message':'Já existe um departamento com este nome'}, status=status.HTTP_409_CONFLICT)
-            elif code.exists():
+            if code.exists():
                 return Response({'message':'Já existe um departamento com este código'}, status=status.HTTP_409_CONFLICT)
             serializer.save()
             

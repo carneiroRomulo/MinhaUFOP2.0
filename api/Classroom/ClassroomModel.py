@@ -11,5 +11,5 @@ class Classroom(models.Model):
     capacity = models.IntegerField()
     
     def __str__(self):
-        return f'{self.code}'
+        return f'{self.building} - {self.name}'
         

@@ -13,14 +13,16 @@ class SubjectList(generics.ListCreateAPIView):
     def create(self, request, format=None):
         serializer = SubjectSerializer(data=request.data)
         if serializer.is_valid():
-            date = serializer.validated_data.get('date')
-            tipo = serializer.validated_data.get('tipo')
+            name = Subject.objects.filter(name = serializer.validated_data.get('name'))
+            code = Subject.objects.filter(code = serializer.validated_data.get('code'))
             
-            queryset = Subject.objects.filter(date=date, tipo=tipo)
-            if queryset.exists():
-                return Response({'message':'Já existe um cardápio para este dia/horario'}, status=status.HTTP_409_CONFLICT)
+            if name.exists():
+                return Response({'message':'Já existe uma disciplina com este nome'}, status=status.HTTP_409_CONFLICT)
+            
+            elif code.exists():
+                return Response({'message':'Já existe uma disciplina com este código'}, status=status.HTTP_409_CONFLICT)
+            
             serializer.save()
-            
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

@@ -6,6 +6,7 @@ from .Department import DepartmentModel
 from .Subject import SubjectModel
 from .Teacher import TeacherModel
 from .Classroom import ClassroomModel
+from .AvailableSubject import AvailableSubjectModel
 
 class MenuAdmin(admin.ModelAdmin):
     list_display = ('id', 'timestamp', 'date', 'period_of_day', 'protein_main', 'protein_secondary')
@@ -30,3 +31,7 @@ admin.site.register(TeacherModel.Teacher, TeacherAdmin)
 class ClassroomAdmin(admin.ModelAdmin):
     list_display = ('id', 'timestamp', 'updated_at', 'building', 'name', 'capacity')
 admin.site.register(ClassroomModel.Classroom, ClassroomAdmin)
+
+class AvailableSubjectAdmin(admin.ModelAdmin):
+    list_display = ('id', 'timestamp', 'updated_at', 'subject', 'teacher', 'period', 'classroom')
+admin.site.register(AvailableSubjectModel.AvailableSubject, AvailableSubjectAdmin)
