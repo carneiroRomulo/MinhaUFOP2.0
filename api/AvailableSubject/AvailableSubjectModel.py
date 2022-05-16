@@ -33,5 +33,5 @@ class AvailableSubject(models.Model):
     day_2_time_2 = models.TimeField(null=True)
     
     def __str__(self):
-        return f'{self.subject}'
+        return f'{self.subject} - {self.period}'
         

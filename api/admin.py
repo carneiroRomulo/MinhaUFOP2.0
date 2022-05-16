@@ -7,6 +7,8 @@ from .Subject import SubjectModel
 from .Teacher import TeacherModel
 from .Classroom import ClassroomModel
 from .AvailableSubject import AvailableSubjectModel
+from .Enrollment import EnrollmentModel
+from .Period import PeriodModel
 
 class MenuAdmin(admin.ModelAdmin):
     list_display = ('id', 'timestamp', 'date', 'period_of_day', 'protein_main', 'protein_secondary')
@@ -35,3 +37,11 @@ admin.site.register(ClassroomModel.Classroom, ClassroomAdmin)
 class AvailableSubjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'timestamp', 'updated_at', 'subject', 'teacher', 'period', 'classroom')
 admin.site.register(AvailableSubjectModel.AvailableSubject, AvailableSubjectAdmin)
+
+class EnrollmentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'timestamp', 'updated_at', 'is_active', 'period', 'student', 'subject')
+admin.site.register(EnrollmentModel.Enrollment, EnrollmentAdmin)
+
+class PeriodAdmin(admin.ModelAdmin):
+    list_display = ('id', 'timestamp', 'updated_at', 'start_at', 'end_at', 'code')
+admin.site.register(PeriodModel.Period, PeriodAdmin)

@@ -10,6 +10,7 @@ from .Teacher import TeacherView
 from .Classroom import ClassroomView
 from .Period import PeriodView
 from .AvailableSubject import AvailableSubjectView
+from .Enrollment import EnrollmentView
 
 urlpatterns = [    
     path('auth/register', AuthView.RegisterView.as_view(), name='Register'),
@@ -44,5 +45,8 @@ urlpatterns = [
     
     path('availableSubject/', AvailableSubjectView.AvailableSubjectList.as_view(), name='AvailableSubject List'),
     path('availableSubject/<int:pk>/', AvailableSubjectView.AvailableSubjectDetail.as_view(), name='AvailableSubject Detail'),
+    
+    path('enrollment/', EnrollmentView.EnrollmentList.as_view(), name='Enrollment List'),
+    path('enrollment/<int:pk>/', EnrollmentView.EnrollmentDetail.as_view(), name='Enrollment Detail'),
 ]
 
