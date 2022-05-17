@@ -1,17 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import User from "./pages/User";
-import Sidebar from "./components/Sidebar";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-const root = ReactDOM.createRoot (document.getElementById("app"))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <>
-        <Sidebar />
-        <Router key='router'>
-            <Routes key='routes'>
-                <Route key='user' path="/user" element={<User/>} />
-            </Routes>    
-        </Router>
-    </>
-)
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

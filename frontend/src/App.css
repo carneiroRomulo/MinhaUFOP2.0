@@ -1,0 +1,43 @@
+/* .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+
+.center_component {
+  position: absolute; 
+  display:flex; 
+  flex-direction:column;
+  top:50%; left:50%; 
+  border-radius: 4px; 
+  background-color:#8a1e35; 
+  padding:60px; 
+  transform:translate(-50%, -50%); 
+}
+
+.maindiv{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.saldodiv{
+  background-color: #8a1e35;
+  text-align: center;
+  border-radius: 1rem;
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.ruimg{
+  width: 300px;
+  height: 350px;
+  margin-top: 1rem;
+}
