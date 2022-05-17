@@ -11,7 +11,7 @@ const LoginPage = () => {
   return (
     <Box className="center_component">
       <h2 style={{color:"#FFFFFF"}}>Minha UFOP</h2>
-      <TextField style={{marginBottom:20, backgroundColor:"#FFFFFF", borderRadius:4}} type="text" key="Username" label="CPF" variant="filled" size="small" onChange={(event) => setUsername(event.target.value)} />
+      <TextField style={{marginBottom:20, backgroundColor:"#FFFFFF", borderRadius:4}} type="text" key="Username" label="Matrícula" variant="filled" size="small" onChange={(event) => setUsername(event.target.value)} />
       <TextField style={{marginBottom:20, backgroundColor:"#FFFFFF", borderRadius:4}} type="password"   key="Password" label="Senha" variant="filled" size="small" onChange={(event) => setPassword(event.target.value)} />
       <Button style={{marginBottom:20}} variant="contained" color="primary" onClick={() => loginUser(username, password)}>Entrar</Button>
       <div>

@@ -8,13 +8,13 @@ import ruimg from '../static/images/ru.png'
 
 const HomePage = () => {
   const columnsEnrollmentSubjects = [
-    { id:"time", label:"Horário", minWidth:100},
-    { id:"monday", label:"Segunda", minWidth:50},
-    { id:"tuesday", label:"Terça", minWidth:50},
-    { id:"wednesday", label:"Quarta", minWidth:50},
-    { id:"thursday", label:"Quinta", minWidth:50},
-    { id:"friday", label:"Sexta", minWidth:50},
-    { id:"sunday", label:"Sábado", minWidth:50},
+    { id:"time", label:"Horário", minWidth:100, align:"center"},
+    { id:"monday", label:"Segunda", minWidth:50, align:"center"},
+    { id:"tuesday", label:"Terça", minWidth:50, align:"center"},
+    { id:"wednesday", label:"Quarta", minWidth:50, align:"center"},
+    { id:"thursday", label:"Quinta", minWidth:50, align:"center"},
+    { id:"friday", label:"Sexta", minWidth:50, align:"center"},
+    { id:"sunday", label:"Sábado", minWidth:50, align:"center"},
   ]
   const rowsEnrollmentSubjects = [
     { time:"07:30 - 08:20", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
@@ -37,7 +37,7 @@ const HomePage = () => {
   const columnsSubjectDetails = [
     { id:"subject", label:"Disciplina", minWidth:50},
     { id:"building", label:"Prédio", minWidth:50},
-    { id:"classroom", label:"classroom", minWidth:50},
+    { id:"classroom", label:"Sala", minWidth:50},
     { id:"language", label:"Idioma", minWidth:50},
   ]
   const rowsSubjectDetails = [
@@ -48,13 +48,22 @@ const HomePage = () => {
   ]
 
   const columnsExtrato = [
-    {id:"extrato", label:"Extrato", minWidth: 200}
+    // , label:"Data/Hora", minWidth: 200
+    // , label:"Valor", minWidth: 200
+    // , label:"Saldo Final", minWidth: 200
+    {id:"extrato", label: "Data/Hora", align:"center"},
+    //{id:"value"},
+    //{id:"saldo"},
   ]
   const rowsExtrato = [
-    {extrato:"09/05/2022 - Janta"},
-    {extrato:"11/05/2022 - Almoço"},
-    {extrato:"11/05/2022 - Janta"},
-    {extrato:"14/05/2022 - Janta"},
+  //   , value:"- R$ 5,50", saldo:"R$ 24,50"
+  // , value:"- R$ 5,50", saldo:"R$ 19,00"
+  // , value:"- R$ 5,50", saldo:"R$ 13,50"
+  // , value:"- R$ 5,50", saldo:"R$  8,00"
+    {extrato:"09/05/2022 18:54:21"},
+    {extrato:"11/05/2022 11:29:48"},
+    {extrato:"11/05/2022 19:02:07"},
+    {extrato:"14/05/2022 19:14:21"},
   ]
   const tableExtrato = {columns: columnsExtrato, rows: rowsExtrato}
   
@@ -64,9 +73,9 @@ const HomePage = () => {
   ]
 
   return (
-    <div className="maindiv grid_center">
+    <div className="maindiv grid_center" style={{/*position:'absolute', left:'50%', top:'40%', transform:"translate(-50%,-50%)"*/}}>
+      <Sidebar/> 
       <div style={{marginLeft:200}}>
-        <Sidebar/> 
         <Container style={{ maxWidth:"60vw"}}>
             {tables.map((table) => (
                 <Box key={table.tableTitle + '-container'} style={{ padding:'20px 0px 20px 0px' }}>

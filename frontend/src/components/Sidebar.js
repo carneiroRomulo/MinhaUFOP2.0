@@ -29,7 +29,6 @@ const drawerWidth = 240;
 
 function Sidebar(props) {
     let {logoutUser} = useContext(AuthContext)
-    
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const isMobile = useMediaQuery("(max-width:900px)");
@@ -40,7 +39,7 @@ function Sidebar(props) {
   
     const drawer = (
       <div>
-        <Toolbar />
+        <Toolbar>Minha UFOP 2.0</Toolbar>
         <Divider />
         <List>
             {pages.map((page) => (

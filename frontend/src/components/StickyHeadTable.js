@@ -52,7 +52,7 @@ const StickyHeadTable = (props) => {
                                     <TableCell
                                         key={column.id}
                                         align={column.align}
-                                        style={{ minWidth: column.minWidth, backgroundColor:'#47BEBA', color: 'white'}}
+                                        style={{ minWidth: column.minWidth, backgroundColor:'#8a1e35', color: 'white'}}
                                     >
                                         {column.label}
                                     </TableCell>
