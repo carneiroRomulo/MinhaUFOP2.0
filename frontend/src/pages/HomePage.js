@@ -8,36 +8,36 @@ import ruimg from '../static/images/ru.png'
 
 const HomePage = () => {
   const columnsEnrollmentSubjects = [
-    { id:"time", label:"Horário", minWidth:100},
-    { id:"monday", label:"Segunda", minWidth:50},
-    { id:"tuesday", label:"Terça", minWidth:50},
-    { id:"wednesday", label:"Quarta", minWidth:50},
-    { id:"thursday", label:"Quinta", minWidth:50},
-    { id:"friday", label:"Sexta", minWidth:50},
-    { id:"sunday", label:"Sábado", minWidth:50},
+    { id:"time", label:"Horário", align:"center"},
+    { id:"monday", label:"Segunda", align:"center"},
+    { id:"tuesday", label:"Terça", align:"center"},
+    { id:"wednesday", label:"Quarta", align:"center"},
+    { id:"thursday", label:"Quinta", align:"center"},
+    { id:"friday", label:"Sexta", align:"center"},
+    { id:"sunday", label:"Sábado", align:"center"},
   ]
   const rowsEnrollmentSubjects = [
-    { time:"07:30 - 08:20", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
-    { time:"08:20 - 09:10", monday:"BCC485",    tuesday:"",           wednesday:"BCC485",   thursday:"",        friday:"", sunday:"" },
-    { time:"09:20 - 10:10", monday:"BCC485",    tuesday:"",           wednesday:"BCC485",   thursday:"",        friday:"", sunday:"" },
-    { time:"10:10 - 11:00", monday:"BCC204",    tuesday:"",           wednesday:"BCC204",   thursday:"",        friday:"", sunday:"" },
-    { time:"11:10 - 12:00", monday:"BCC204",    tuesday:"",           wednesday:"BCC204",   thursday:"",        friday:"", sunday:"" },
-    { time:"12:00 - 12:50", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
-    { time:"13:30 - 14:20", monday:"",          tuesday:"BCC321",     wednesday:"",         thursday:"BCC321",  friday:"", sunday:"" },
-    { time:"14:20 - 15:10", monday:"",          tuesday:"BCC321",     wednesday:"",         thursday:"BCC321",  friday:"", sunday:"" },
-    { time:"15:20 - 16:10", monday:"BCC760",    tuesday:"BCC323",     wednesday:"BCC760",   thursday:"BCC323",  friday:"", sunday:"" },
-    { time:"16:10 - 17:00", monday:"BCC760",    tuesday:"BCC323",     wednesday:"BCC760",   thursday:"BCC323",  friday:"", sunday:"" },
-    { time:"17:10 - 18:00", monday:"",          tuesday:"",           wednesday:"",         thursday:"BCC502",  friday:"", sunday:"" },
-    { time:"18:00 - 18:50", monday:"",          tuesday:"",           wednesday:"",         thursday:"BCC502",  friday:"", sunday:"" },
-    { time:"19:00 - 19:50", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
-    { time:"19:50 - 20:40", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
-    { time:"21:00 - 21:50", monday:"",          tuesday:"",           wednesday:"",         thursday:"",        friday:"", sunday:"" },
+    { time:"07:30 - 08:20", monday:"",              tuesday:"",               wednesday:"",             thursday:"",            friday:"", sunday:"" },
+    { time:"08:20 - 09:10", monday:"BCC485-11T",    tuesday:"",               wednesday:"BCC485-11T",   thursday:"",            friday:"", sunday:"" },
+    { time:"09:20 - 10:10", monday:"BCC485-11T",    tuesday:"",               wednesday:"BCC485-11T",   thursday:"",            friday:"", sunday:"" },
+    { time:"10:10 - 11:00", monday:"BCC204-11T",    tuesday:"",               wednesday:"BCC204-11T",   thursday:"",            friday:"", sunday:"" },
+    { time:"11:10 - 12:00", monday:"BCC204-11T",    tuesday:"",               wednesday:"BCC204-11T",   thursday:"",            friday:"", sunday:"" },
+    { time:"12:00 - 12:50", monday:"",              tuesday:"",               wednesday:"",             thursday:"",            friday:"", sunday:"" },
+    { time:"13:30 - 14:20", monday:"",              tuesday:"BCC321-11T",     wednesday:"",             thursday:"BCC321-11T",  friday:"", sunday:"" },
+    { time:"14:20 - 15:10", monday:"",              tuesday:"BCC321-11T",     wednesday:"",             thursday:"BCC321-11T",  friday:"", sunday:"" },
+    { time:"15:20 - 16:10", monday:"BCC760-11T",    tuesday:"BCC323-11T",     wednesday:"BCC760-11T",   thursday:"BCC323-11T",  friday:"", sunday:"" },
+    { time:"16:10 - 17:00", monday:"BCC760-11T",    tuesday:"BCC323-11T",     wednesday:"BCC760-11T",   thursday:"BCC323-11T",  friday:"", sunday:"" },
+    { time:"17:10 - 18:00", monday:"",              tuesday:"",               wednesday:"",             thursday:"BCC502-11T",  friday:"", sunday:"" },
+    { time:"18:00 - 18:50", monday:"",              tuesday:"",               wednesday:"",             thursday:"BCC502-11T",  friday:"", sunday:"" },
+    { time:"19:00 - 19:50", monday:"",              tuesday:"",               wednesday:"",             thursday:"",            friday:"", sunday:"" },
+    { time:"19:50 - 20:40", monday:"",              tuesday:"",               wednesday:"",             thursday:"",            friday:"", sunday:"" },
+    { time:"21:00 - 21:50", monday:"",              tuesday:"",               wednesday:"",             thursday:"",            friday:"", sunday:"" },
   ]
 
   const columnsSubjectDetails = [
     { id:"subject", label:"Disciplina", minWidth:50},
     { id:"building", label:"Prédio", minWidth:50},
-    { id:"classroom", label:"classroom", minWidth:50},
+    { id:"classroom", label:"Sala", minWidth:50},
     { id:"language", label:"Idioma", minWidth:50},
   ]
   const rowsSubjectDetails = [
@@ -48,7 +48,7 @@ const HomePage = () => {
   ]
 
   const columnsExtrato = [
-    {id:"extrato", label:"Extrato", minWidth: 200}
+    {id:"extrato", label:"Extrato", minWidth: 200, align:"center"}
   ]
   const rowsExtrato = [
     {extrato:"09/05/2022 - Janta"},
@@ -59,7 +59,7 @@ const HomePage = () => {
   const tableExtrato = {columns: columnsExtrato, rows: rowsExtrato}
   
   const tables = [
-    {tableTitle: 'ATESTADO DE MATRÍCULA', columns: columnsEnrollmentSubjects, rows: rowsEnrollmentSubjects},
+    {tableTitle: 'ATESTADO DE MATRÍCULA', download:true, columns: columnsEnrollmentSubjects, rows: rowsEnrollmentSubjects},
     {tableTitle: 'DETALHES DAS DISCIPLINAS MATRICULADAS', columns: columnsSubjectDetails, rows: rowsSubjectDetails},
   ]
 

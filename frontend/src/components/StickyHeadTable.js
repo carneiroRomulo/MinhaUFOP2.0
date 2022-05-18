@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { 
     Table,
+    Button,
     TableBody,
     TableCell,
     TableContainer,
@@ -14,8 +15,8 @@ import {
     AccordionDetails,
     withStyles,
 } from "@material-ui/core"
-import { ArrowDropDownCircle } from "@material-ui/icons"
-
+import { ArrowDropDownCircle, CloudDownloadRounded } from "@material-ui/icons"
+import generatePDF from './AtestadoMatricula'
 
 const StyledTableRow = withStyles({
     root: {
@@ -35,10 +36,18 @@ const StickyHeadTable = (props) => {
         <Accordion expanded={expanded} style={{backgroundColor:"transparent", boxShadow:'none'}}>
             {props.table.tableTitle != null ? (
                 <AccordionSummary style={{padding:0}}>
-                    <Box style={{display:'flex'}} onClick={handleExpanded}>
-                        <ArrowDropDownCircle style={{marginRight: 8}} />
-                        <Typography>{props.table.tableTitle}</Typography>
-                    </Box>
+                    <div style={{width:'100%', display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                        <Box style={{display:'flex'}} onClick={handleExpanded}>
+                            <ArrowDropDownCircle style={{marginRight: 8}} />
+                            <Typography>{props.table.tableTitle}</Typography>
+                        </Box>
+                        {props.table.download ? (
+                            <Button onClick={() => generatePDF()} color="primary" variant="contained" startIcon={<CloudDownloadRounded/>} >
+                                Baixar
+                            </Button>
+                        ) : undefined
+                        }
+                    </div>
                 </AccordionSummary>
             ) : undefined }
 
@@ -52,7 +61,7 @@ const StickyHeadTable = (props) => {
                                     <TableCell
                                         key={column.id}
                                         align={column.align}
-                                        style={{ minWidth: column.minWidth, backgroundColor:'#47BEBA', color: 'white'}}
+                                        style={{ minWidth: column.minWidth, backgroundColor:'#8a1e35', color: 'white'}}
                                     >
                                         {column.label}
                                     </TableCell>
