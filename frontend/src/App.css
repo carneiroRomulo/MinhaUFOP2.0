@@ -23,7 +23,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
   vertical-align: middle;
 }
 
@@ -36,8 +35,34 @@
   padding: 1rem;
 }
 
-.ruimg{
-  width: 300px;
-  height: 350px;
-  margin-top: 2rem;
+.saldodivbutton{
+  background-color: #8a1e35;
+  text-align: center;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 0.2rem;
+}
+
+.saldodivbutton :hover{
+  background-color: #8a1e35;
+  border-radius: 1rem;
+}
+
+.saldodivbutton button{
+  background-color: #8a1e35;
+  text-align: center;
+  color: white;
+  font-size: large;
+  border: 0;
+}
+
+.right{
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.maindiv td{
+  word-wrap:break-word;
 }

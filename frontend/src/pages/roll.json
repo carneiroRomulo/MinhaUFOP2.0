@@ -1,0 +1,137 @@
+[   
+    { 
+        "time":"07:30 - 08:20",
+        "monday":"",
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"08:20 - 09:10", 
+        "monday":"BCC485-11T",    
+        "tuesday":"",               
+        "wednesday":"BCC485-11T",   
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"09:20 - 10:10", 
+        "monday":"BCC485-11T",    
+        "tuesday":"",               
+        "wednesday":"BCC485-11T",   
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"10:10 - 11:00", 
+        "monday":"BCC204-11T",    
+        "tuesday":"",               
+        "wednesday":"BCC204-11T",   
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"11:10 - 12:00", 
+        "monday":"BCC204-11T",    
+        "tuesday":"",               
+        "wednesday":"BCC204-11T",   
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"12:00 - 12:50", 
+        "monday":"",              
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"13:30 - 14:20", 
+        "monday":"",              
+        "tuesday":"BCC321-11T",     
+        "wednesday":"",             
+        "thursday":"BCC321-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"14:20 - 15:10", 
+        "monday":"",              
+        "tuesday":"BCC321-11T",     
+        "wednesday":"",            
+        "thursday":"BCC321-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"15:20 - 16:10", 
+        "monday":"BCC760-11T",    
+        "tuesday":"BCC323-11T",     
+        "wednesday":"BCC760-11T",   
+        "thursday":"BCC323-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"16:10 - 17:00", 
+        "monday":"BCC760-11T",    
+        "tuesday":"BCC323-11T",     
+        "wednesday":"BCC760-11T",   
+        "thursday":"BCC323-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"17:10 - 18:00", 
+        "monday":"",              
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"BCC502-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"18:00 - 18:50", 
+        "monday":"",              
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"BCC502-11T",  
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"19:00 - 19:50", 
+        "monday":"",              
+        "tuesday":"",              
+        "wednesday":"",             
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"19:50 - 20:40", 
+        "monday":"",              
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    },
+    { 
+        "time":"21:00 - 21:50", 
+        "monday":"",              
+        "tuesday":"",               
+        "wednesday":"",             
+        "thursday":"",            
+        "friday":"", 
+        "sunday":"" 
+    }
+]

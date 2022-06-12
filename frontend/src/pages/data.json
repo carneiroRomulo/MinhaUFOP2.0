@@ -1,0 +1,37 @@
+[
+    {
+        "subject": "BANCO DE DADOS I",
+        "code": "BCC321-11T",
+        "building": "BLOCO DE SALAS DE AULA",
+        "classroom":"206",
+        "language": "PORTUGUES"            
+    },
+    {
+        "subject": "ENGENHARIA DE SOFTWARE II", 
+        "code": "BCC323-11T",
+        "building":"ICEB",
+        "classroom":"19", 
+        "language":"PORTUGUES"
+    },
+    {
+        "subject":"DEISGN DE INTERAÇÃO", 
+        "code": "BCC485-11T",
+        "building":"BLOCO DE SALAS DE AULA", 
+        "classroom":"209", 
+        "language":"PORTUGUES"
+    },
+    {
+        "subject":"METODOLOGIA CIENTIFICA EM CIENCIA DA COMPUTAÇÃO", 
+        "code": "BCC502-11T", 
+        "building":"BLOCO DE SALAS DE AULA", 
+        "classroom":"109", 
+        "language":"PORTUGUES"
+    },
+    {
+        "subject":"INTELIGENCIA ARTIFICIAL", 
+        "code": "BCC325-11T", 
+        "building":"BLOCO DE SALAS DE AULA", 
+        "classroom":"11", 
+        "language":"PORTUGUES"
+    }
+]
